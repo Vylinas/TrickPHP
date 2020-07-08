@@ -1,0 +1,15 @@
+<?php 
+
+/******************
+* Estimer le temps d'éxécution d'un code
+* Utile pour trouver quel partie du code prend du temps
+******************/
+// On crée un temps à un instant T
+$begin_time = array_sum(explode(' ', microtime()));
+
+... CODE A TESTER ...
+
+// On crée un second temps après l'exe du code à tester
+$end_time = array_sum(explode(' ', microtime()));
+//Puis on print la différence
+var_dump('Le temps d\'exécution est '.($end_time - $begin_time));
